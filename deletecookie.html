@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>deleting cookie</title>
+    <script type="text/JavaScript">
+        function writecookie() {
+            var now=new Date();
+            now.setMonth(now.getMonth()-1);
+            cookievalue=escape(document.myform.customer.value)+";"
+            document.cookie="name="+cookievalue;
+            document.cookie="expires="+now.toUTCstring()+";"
+            document.write("setting cookie="+"name="+cookievalue);
+               
+        }
+    </script>
+</head>
+<body>
+  <form action=""name="myform">
+    Enter name:<input type="text"name="customer"/>
+    <input type="button"value="set cookie"onclick="writecookie()"/>
+  </form>  
+</body>
+</html>

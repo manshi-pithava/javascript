@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>read the cookie</title>
+    <script type="text/javascript">
+        function readcookie()
+        {
+            var allc=document.cookie()
+            document.write("all cookie="+allc);
+            //all cookie pair inan array
+            cookiearray=allc.split(';');
+            for(var i=0;i<cookiearray.length;i++)
+            {
+                name=cookiearray[i].split('=')[0];
+                value=cookiearray[i].split('=')[1];
+                document.write("key="+name+"and value is="+value);
+
+            }
+        }
+    </script>
+</head>
+<body>
+    <form name="myform" action="">
+        <b>click here to show the set cookie effect</b>
+        <input type="button" value="get cookie"onclick="readcookie()"/>
+    </form>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>difine object</title>
+    <script type="text/javascript">
+        function rate(amount)
+        {
+            this.am=amount;
+        }
+        function place(house,owner)
+        {
+            this.house=house;
+            this.owner=owner;
+            this.rate=rate;
+
+        }
+    </script>
+</head>
+<body>
+    <script type="text/javascript">
+        let norate=new place("  nearest sai temple","mr.allen");
+        norate.rate(5000);
+        document.write("<table border=2><tr><td>");
+        document.write("<h3><u>RATE-HOUSE<u/></h3>");
+        document.write("House"+norate.house);
+        document.write("<br/>Owner  "+norate.owner);
+        document.write("<br/>Rate"+norate.am+"/-");
+        document.write("<br/><br/><marquee behavior=scroll bgcolor=gray direction=left>Rate house RATE House</marquee>");
+        document.write("</td></tr></table>");
+    </script>
+    
+</body>
+</html>

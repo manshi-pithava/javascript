@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function is return value</title>
+    <script type="text/javascript">
+        function concated(first,last)
+        {
+            var full;
+            full=first+last;
+            return full;
+        }
+        function second()
+        {
+            var result;
+            result=concated('pithava','kaushal');
+            document.write(result);
+        }
+    </script>
+</head>
+<body>
+    <p> click here(concatevalue)</p>
+    <form>
+        <input type="button"onclick="second()"value="call function">
+    </form>
+</body>
+</html>

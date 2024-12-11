@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>constrocter</title>
+    <script type="text/javascript">
+        var v=new Function("x","y","return x*y;");
+        function second()
+        {
+            var result;
+            result=func(12,33);
+            document.write( result );
+        }
+    </script>
+</head>
+<body>
+    <b>call constrocter</b>
+    <form>
+        <input type="button"onclick="second()" value="call constrocter">
+    </form>
+</body>
+</html>

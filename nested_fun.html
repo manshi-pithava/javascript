@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        function first(a,b) {
+            function square(x){ return x*x; }
+            return Math.sqrt(square(a) + square(b));
+            
+        }
+        function second()
+        {
+            var result;
+            result=first(2,3);
+            document.write( result );
+        }
+    </script>
+</head>
+<body>
+  <b>call nested function</b>
+    <form>
+        <input type="button"onclick="second()"value="nested">
+    </form>
+</body>
+</html>

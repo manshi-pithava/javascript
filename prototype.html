@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>user define object</title>
+    <script type="text/javascript">
+        function book(name, guide) {
+            this.name = name;
+            this.guide = guide;
+
+        }
+
+    </script>
+</head>
+
+<body>
+    <script type="text/javascript">
+        
+        for (i=0;i<4;i++)
+        {
+            var b = new book("java", "payalmam")
+            book.prototype.price = null;
+            b.price = 270;
+            document.write("<br/>book name =" + b.name);
+            document.write("<br/>book guide=" + b.guide);
+            document.write("<br/>book price=" + b.price);
+            document.write("<br/><hr height=100 width=1000 bgcolor=black>");
+
+        }
+    </script>
+</body>
+
+</html>

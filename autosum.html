@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <input type="text" id="Num1" value="1" onblur="reSum();" />
+
+    <input type="text" id="Num2" value="1" onblur="reSum();" />
+    <p>Sum 1</p>
+
+    <input type="text" id="Sum" value="" />
+    <input type="text" id="no" value="2" onblur="sum();" />
+    <input type="text" id="no1" value="2" onblur="sum();">
+    <p>sum 2</p>
+
+    <input type="text" id="sum1" value="" />
+    <br>
+    <script>
+
+        function reSum() {
+            var num1 = parseInt(document.getElementById("Num1").value);
+            var num2 = parseInt(document.getElementById("Num2").value);
+            document.getElementById("Sum").value = num1 + num2;
+        }
+        function sum() {
+            var no1 = parseInt(document.getElementById("no").value);
+            var no2 = parseInt(document.getElementById("no1").value);
+            document.getElementById("sum1").value = no + no1;
+        }
+    </script>
+</body>
+
+</html>

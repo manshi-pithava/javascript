@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>using this keyword</title>
+    <script type="text/javascript">
+        function data(username, email) {
+            this.username = username;
+            this.email = email;
+        }
+    </script>
+</head>
+
+<body>
+
+    <script type="text/javascript">
+        let detail = new data("allen", "allen123@gmail.com");
+        document.write("<center>");
+        document.write("<table border=2 bordercolor=black>");
+            document.write("<h4><u>info </u></h4>");
+
+        document.write("<tr>");
+        document.write("<td>");
+        document.write("<b>username </b></td><td> " + detail.username + "</td>");
+        document.write("</tr><tr>");
+        document.write("<td>");
+        document.write("<b>   Email  </b></td><td> " + detail.email + "</td>");
+        document.write("</tr>");
+        document.write("</table>");
+    </script>
+
+</body>
+
+</html>

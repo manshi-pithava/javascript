@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bootstrap Calculator</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+  <style>
+    .calculator {
+      width: 300px;
+      margin: 50px auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="container card body m-3  border border-dark"hidden>
+    <h4 class="text text-dark">intro</h4>
+    <ul>
+      <li>addition</li>
+      <li>substraction</li>
+      <li>multiplication</li>
+      <li>division</li>
+      <li>and you can find a <b>percentage</b> select <b><u>%(modulo)</u></b></li>
+    </ul>
+  </div>
+  
+  <div class="container calculator card body bg bg-dark text text-light">
+    <h2>Calculator</h2>
+    <div class="input-group mb-3">
+      <input type="text" id="num1" class="form-control" placeholder="Enter number 1">
+    </div>
+    <div class="input-group mb-3">
+      <select id="operator" class="form-control">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+        <option value="%">%</option>
+      </select>
+    </div>
+    <div class="input-group mb-3">
+      <input type="text" id="num2" class="form-control" placeholder="Enter number 2">
+    </div>
+    <button onclick="calculate()" class="btn btn-primary btn-block">Calculate</button>
+    <p id="result" class="mt-3"></p>
+  </div>
+
+  
+  <script>
+    function calculate() {
+      var num1 = parseFloat(document.getElementById('num1').value);
+      var num2 = parseFloat(document.getElementById('num2').value);
+      var operator = document.getElementById('operator').value;
+      var result;
+
+      switch (operator) {
+        case '+':
+          result = num1 + num2;
+          break;
+        case '-':
+          result = num1 - num2;
+          break;
+        case '*':
+          result = num1 * num2;
+          break;
+        case '/':
+          if (num2 !== 0) {
+            result = num1 / num2;
+          } else {
+            result = 'Cannot divide by zero!';
+          }
+          break;
+          case '%':
+            result=(num1 *100)/num2;
+         // result = num1 % num2;
+          break;
+          
+        default:
+          result = 'Invalid operator';
+      }
+
+      document.getElementById('result').innerHTML = 'Result: ' + result;
+    }
+  </script>
+  
+</body>
+</html>

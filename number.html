@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>number</title>
+    <script type="text/javascript">
+        function show() {
+            var val = Number.MAX_VALUE;
+            var val2 = Number.MIN_VALUE;
+            var day = 6;
+            var n = Number.MAX_VALUE * 2;
+            if (n == Number.POSITIVE_INFINITY) {
+                alert("value of big number=" + n)
+            }
+            if (day < 1 || day > 31) {
+                day = Number.NaN
+                alert("day of month must be between 1 to 31")
+            }
+            document.write("day of month=" + day);
+            document.write("<br/>max value=" + val);
+            document.write("<br/>min value=" + val2);
+            document.write("<br/>");
+            document.write(Number.NaN);
+            document.write("<br/>");
+            document.write(Number.NEGATIVE_INFINITY);
+            document.write("<br/>");
+            document.write(Number.POSITIVE_INFINITY);
+            document.write("<br/>");
+
+        }
+    </script>
+</head>
+
+<body>
+    <form action="">
+        <input type="button" value="click" onclick="show();" />
+    </form>
+</body>
+
+</html>
